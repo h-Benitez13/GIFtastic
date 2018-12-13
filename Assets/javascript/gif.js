@@ -49,7 +49,7 @@ $("#add-animal").on("click", function (event) {
 // Calling the renderButtons function to display the initial list of animals
 renderButtons();
 
-$('#add-animal').click('.animal', function(){
+$('.button-group').click('.animal', function(){
     var topic = $(this).attr('data-name');
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topic + "&api_key=XDm1iNZRm06xYQ5dvkNgRfGtXJ6kiIHF&limit=10";
     $.ajax({
