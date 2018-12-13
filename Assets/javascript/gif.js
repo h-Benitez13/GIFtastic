@@ -7,7 +7,7 @@ $(document).ready(function () {
 
     // first sample topcs
     // array of strings
-    var topics = ["nemo", "bunny", "dog", "bald eagle"];
+    var topics = ["Mickey Mouse", "Goofy", "Donald Duck", "Minnie Mouse"];
 
     // Function for displaying gif data
     function renderButtons() {
@@ -31,6 +31,7 @@ $(document).ready(function () {
 
     // This function handles events where the add  button is clicked
     $("#add-buttonTopic").on("click", function (event) {
+        $('.card-title').hide();
         // event.preventDefault() prevents submit button from trying to send a form.
         // Using a submit button instead of a regular button allows the user to hit
         // "Enter" instead of clicking the button if desired
