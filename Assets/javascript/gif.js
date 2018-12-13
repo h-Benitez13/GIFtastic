@@ -49,15 +49,40 @@ $("#add-animal").on("click", function (event) {
 // Calling the renderButtons function to display the initial list of animals
 renderButtons();
 
-$('.button-group').click('.animal', function(){
+//   next we want to be able to pull data from the gif link 
+// using the api key we got from the gif site
+
+$('.button-group').click('.animal', function () {
+    // all buttons, before the submit 
+    // the buttons created after the submit
     var topic = $(this).attr('data-name');
+    // URL site
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topic + "&api_key=XDm1iNZRm06xYQ5dvkNgRfGtXJ6kiIHF&limit=10";
     $.ajax({
         url: queryURL,
         method: "GET"
-      }).then(function(response) {
+    }).then(function (response) {
+        // once click we want the gif's to print onto the HTML page
         console.log(response);
-      });
+        var results = response.data;
+
+        for (var i = 0; i < results.length; i++) {
+            var gifDiv = $("<div>");
+
+            var rating = results[i].rating;
+
+            var p = $("<p>").text("Rating: " + rating);
+
+            var personImage = $("<img>");
+            personImage.attr("src", results[i].images.fixed_height.url);
+
+            gifDiv.prepend(p);
+            gifDiv.prepend(personImage);
+
+            $(".gifs-appear").prepend(gifDiv);
+        }
+    });
+
+
 })
 
-//   next we want to be able to pull data from the gif link 
