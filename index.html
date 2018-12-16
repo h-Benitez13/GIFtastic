@@ -1,38 +1,50 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <title>Page Title</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="./Assets/css/reset.css">
     <link rel="stylesheet" type="text/css" media="screen" href="./Assets/css/style.css" />
 </head>
+
 <body>
     <div class="container">
         <div class="row">
-            <div class="jumbotron jumbotron-fluid text-center">
-                <h1 class='jumbotron-title'>When You Wish Upon a Star...</h1>
-                <form id="button-form">
-                        
-                        <input type="text" id="topic-input">
-                  
-                        <!-- Button triggers new movie to be added -->
-                        <input id="add-buttonTopic" type="submit" value="Touch Me">
-                      </form>
-            </div>
-            
-        </div>
-        <div class="row">
-            <div class= "button-group"></div>
+
+            <h1 class='jumbotron-title'>When You Wish Upon a Star...</h1>
         </div>
 
+        <form id="button-form">
+            <div class="row">
+
+                <input type="text" id="topic-input">
+            </div>
+            <div class="row">
+                <!-- Button triggers new movie to be added -->
+                <input id="add-buttonTopic" type="submit" value="Add Disney Character">
+
+            </div>
+        </form>
+
+
+
         <div class="row">
-            <div class="card">
-                <h5 class="card-header">GIF'S HERE</h5>
+            <div class="button-group btn-group-vertical"></div>
+        </div>
+
+        <div class="rowt">
+            <div class="card float-left">
+                <h5 class="card-header"><small>Disney Characters Here!</small></h5>
                 <div class="card-title">Just a place holder</div>
                 <div class="card-body">
-                    <div class="gifs-appear"></div>
+                    <div class='row-test'>
+                        <div class="gifs-appear"></div>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -43,4 +55,5 @@
 
     <script src="./Assets/javascript/gif.js"></script>
 </body>
+
 </html>

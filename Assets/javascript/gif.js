@@ -17,7 +17,7 @@ $(document).ready(function () {
         for (var i = 0; i < topics.length; i++) {
 
             var newButton = $("<button>");
-            newButton.addClass("user-input");
+            newButton.addClass("btn btn-light user-input");
             newButton.attr("data-name", topics[i]);
             newButton.text(topics[i]);
             $(".button-group").append(newButton);
@@ -53,6 +53,8 @@ $(document).ready(function () {
     $('.button-group').on("click",'.user-input', function () {
         // all buttons, before the submit 
         // the buttons created after the submit
+        $('.card-title').hide();
+
         var topic = $(this).attr('data-name');
         // URL site
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topic + "&api_key=XDm1iNZRm06xYQ5dvkNgRfGtXJ6kiIHF&limit=10";
@@ -72,7 +74,7 @@ $(document).ready(function () {
                 var p = $("<p>").text("Rating: " + rating);
 
                 var gifImage = $("<img>");
-                gifImage.addClass('test');
+                gifImage.addClass('gif-image');
                 gifImage.attr("src", results[i].images.fixed_height_still.url);
                 gifImage.attr('data-state', 'still');
                 gifImage.attr('data-animate', results[i].images.fixed_height.url);
@@ -81,14 +83,14 @@ $(document).ready(function () {
                 gifDiv.append(p);
                 gifDiv.append(gifImage);
 
-                $(".gifs-appear").prepend(gifDiv);
+                $(".row-test").prepend( gifDiv);
 
             }
         });
 
 
     })
-    $('.gifs-appear').on("click",'.test', function (event) {
+    $('.gifs-appear').on("click",'.gif-image', function (event) {
         event.preventDefault();
         var state = $(this).attr('data-state');
         console.log(state);

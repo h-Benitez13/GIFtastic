@@ -1,6 +1,50 @@
-.jumbotron-title {
-    font-size: 50px;
+body{
+    background-image: url('../Images/replacement.jpg');
+    background-position: cover ;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    margin-bottom: 20%;
+    height: 100%;
 }
-.card {
+
+.button-group{
     margin-top: 10px;
 }
+
+.jumbotron-title {
+    opacity: 0.9;
+    font-size: 20px;
+    color: white;
+}
+#topic-input{
+    float: left;
+    margin-right: -30px;
+    width:100px;
+}
+
+
+.user-input{
+    background-color: white;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+
+p, img {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.row-test::after{
+    content: "";
+  clear: both;
+  display: table;
+}
+
+.card {
+    width: 40%;
+    height: 25%;
+    margin-left: -45px;
+
+}
+
